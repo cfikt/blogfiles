@@ -1,0 +1,443 @@
+/* -------------------------------------- 背景色 -------------------------------------- */
+/* 首页文章卡片颜色 */
+[data-theme="light"]
+#recent-posts > .recent-post-item {
+    background: rgba(255, 255, 255);
+    border: 2px solid #607d8b;
+}
+
+/* 文章页面正文背景 */
+[data-theme="light"]
+div#post {
+    background: rgba(255, 255, 255, 0.95);
+    /* font-size: 16px; */
+}
+
+/* 分页页面 */
+[data-theme="light"]
+div#page {
+    background: rgba(255, 255, 255);
+}
+
+/* 归档页面 */
+[data-theme="light"]
+div#archive {
+    background: rgba(255, 255, 255);
+}
+
+/* 标签页面 */
+[data-theme="light"]
+div#tag {
+    background: rgba(255, 255, 255);
+}
+
+/* 分类页面 */
+[data-theme="light"]
+div#category {
+    background: rgba(255, 255, 255);
+}
+
+/* -------------------------------------- 头部颜色 -------------------------------------- */
+/* 背景图片为白色时启用 */
+/* [data-theme="light"] */
+/* #page-header #site-title { */
+    /* color: #000; */
+/* } */
+/* [data-theme="light"] */
+/* #page-header #site-subtitle { */
+    /* color: #000; */
+/* } */
+/* [data-theme="light"] */
+/* #nav a { */
+    /* color: #000; */
+/* } */
+
+
+/* 文章页面首部字体颜色 */
+[data-theme="light"]
+#post-info #post-meta a {
+    color: #fff;
+    font-weight: 600;
+}
+[data-theme="light"]
+#post-info .post-title {
+    color: #fff;
+    font-weight: bold;
+}
+[data-theme="light"]
+#post-info #post-meta {
+    color: #fff;
+}
+
+/*右下角按钮*/
+#rightside > div > button, #rightside > div > a {
+  display: block;
+  margin-bottom: 6px;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #696969;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+/* -------------------------------------- 标题 -------------------------------------- */
+/* 一级标题 */
+#article-container.post-content h1 {
+    text-align: center;                     /* 居中 */
+    font-size: 1.8em;                       /* 大小 */
+}
+
+/* 二级标题 */
+[data-theme="light"]
+#article-container.post-content h2 {
+    padding-left: 0px;                      /* 缩进 */
+    border-bottom: 2px solid #000;          /* 二级标题下横线 */
+}
+
+/* 标题前缀 */
+#article-container h1:before {
+  content: "H1";
+}
+#article-container h2:before {
+  content: "H2";
+  /* margin-left: -65px */
+}
+#article-container h3:before {
+  content: "H3";
+}
+
+/* 标题前缀属性 */
+h1::before, h2::before, h3::before {
+    font-weight: 400;
+    text-align: right;
+    padding-right: 1ch;
+    color: #aeb1b5;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+
+
+
+/* -------------------------------------- 属性样式 -------------------------------------- */
+:root {
+    --font-family: 'DFPKingGothicGB-medium', PingFang SC, Microsoft YaHei, sans-serif;
+}
+
+/* 导航栏 */
+#nav .menus_items {
+    /* display: inline; 这个带不带都可以，本来就是 inline */
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+.nav-fixed #nav{
+    transform: translateY(58px)!important;
+    -webkit-transform: translateY(58px)!important;
+    -moz-transform: translateY(58px)!important;
+    -ms-transform: translateY(58px)!important;
+    -o-transform: translateY(58px)!important;
+}
+#nav{
+    transition: none!important;
+    -webkit-transition: none!important;
+    -moz-transition: none!important;
+    -ms-transition: none!important;
+    -o-transition: none!important;
+}
+#nav *::after{
+    background-color: transparent!important;
+}
+#site-name::before{
+    opacity: 0;
+    background-color: #26D!important;
+    border-radius: 8px;
+    transition: .3s;
+    position:absolute;
+    top:0!important;
+    right:0!important;
+    width:100%;
+    height:100%;
+    content: "\f015";
+    box-shadow: 0 0 5px var(--lyx-theme);
+    font-family: "Font Awesome 6 Free";
+    text-align: center;
+    color:white;
+    line-height:28px;/*如果有溢出或者垂直不居中的现象微调一下这个参数*/
+    font-size: 20px;/*根据个人喜好*/
+}
+#site-name:hover::before{
+    opacity: 1;
+    scale:1.03;
+}
+#site-name{
+    position: relative;
+    font-size: 20px; /*一定要把字体调大点，否则效果惨不忍睹！*/
+}
+
+
+/* 正文字体大小 */
+div#post {
+    font-size: 14.88px;
+}
+
+/* 粗体颜色 */
+[data-theme="light"]
+b, strong {
+    color: #26D;
+    font-weight: initial;
+}
+
+/* 字体颜色 */
+[data-theme="light"]
+#article-container p {
+    color: rgb(51, 51, 51);                     /* 字体颜色 */
+}
+
+/* 段落属性 */
+#article-container p {
+    margin: 0 0 10px;                           /* 外边距 */
+    line-height: 24px;                          /* 行距 */
+    font-family: var(--font-family);                   /* 字体 */
+    
+}
+
+/* 引用块 */
+blockquote {
+    color: #000;
+    /* padding: 0.5em 5px; */
+    /* margin: 1.5em 0px; */
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    /* font-weight: bold; */
+    border-left: 3px solid #009aff;
+    background-color: rgb(73 177 245 / 20%);
+}
+blockquote::before {
+    color: rgb(67, 65, 65);
+    content: "📑";
+    font-size: 18px;
+    line-height: 2em;
+    margin-right: 0.25em;
+    vertical-align: -0.5em;
+}
+
+/* 无序列表 */
+#article-container.post-content ul > li {
+    font-family: var(--font-family);
+    line-height: 24px;
+    margin: 10px 0px 10px -22px;
+}
+#article-container.post-content ul ul {
+    margin: 10px 0px 10px 10px;
+}
+
+/* 有序列表 */
+#article-container ol li, #article-container ul li {
+    font-family: var(--font-family);
+    line-height: 24px;
+    margin: 0px 0px 10px -12px;
+}
+
+/* 目录 */
+#aside-content #card-toc {
+    font-family: "PingFang SC";
+}
+#aside-content #card-toc .toc-content .toc-link.active {
+    background: rgb(98, 91, 86);
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+/* 侧边栏 */
+#aside-content .card-widget {
+    font-family: var(--font-family);
+    
+}
+
+/* 首页卡片 */
+#recent-posts > .recent-post-item {
+    font-family: var(--font-family);
+    
+    /* height: 15em; */
+}
+
+/* 分类页面 */
+div#page {
+    font-family: var(--font-family);
+    
+}
+div#category {
+    font-family: var(--font-family);
+    
+}
+
+/* 归档页面 */
+div#archive {
+    font-family: var(--font-family);
+    
+}
+
+/* 块注释 */
+/* figure.highlight pre .comment { */
+    /* font-family: var(--font-family); */
+/* } */
+
+/* 行内代码 */
+[data-theme="light"]
+#article-container code {
+    color: #24D;
+    background-color: #a1cdf32e;
+    /* margin: 0 4px; */
+    /* padding: 3px 4px; */
+    font-size: 14.5px;
+}
+
+/* 图片阴影 */
+#article-container img {
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 50%);
+}
+
+
+/* 分类页间距 */
+.article-sort-item.no-article-cover {
+    height: 60px;
+}
+.article-sort {
+    margin-left: 10px;
+    padding-left: 19px;
+    border-left: 3px solid #9c9c9c;
+}
+
+/* 时间线 */
+#article-container .timeline .timeline-item.headline .timeline-item-title .item-circle > p {
+    font-size: 1em;
+}
+
+/* 首页文章卡片高度 */
+@media screen and (min-width: 768px) {
+    #recent-posts > .recent-post-item {
+        height: 15em!important;
+    }
+}
+
+/* 文章页宽度 */
+.layout > div:first-child {
+    width: 80%;
+}
+
+/* 阅读模式 */
+html.hide-aside .layout > div:first-child {
+    width: 95%;
+}
+
+/* 链接 */
+#article-container a {
+    font-family: var(--font-family);
+    
+}
+
+/* 分页按钮 */
+[data-theme="light"]
+#pagination .page-number.current {
+    background: #ffffff;
+    color: #000;
+}
+
+/* Tabs 颜色 */
+#article-container .tabs > .tab-contents .tab-item-content.active {
+    background-color: rgb(96 125 139 / 30%);
+}
+/* Tabs */
+#article-container .tabs > .tab-contents .tab-item-content {
+    position: relative;
+    display: none;
+    padding: 45px 30px 5px 30px;
+}
+.fa-arrow-up:before {
+    content: "\f062";
+    /* vertical-align: 10px; */
+}
+
+/* 代码块滚动条 */
+#article-container figure.highlight table {
+    display: table-caption;
+    overflow: auto;
+    border: none;
+}
+
+/* 列表缩进 */
+#article-container ol ol, #article-container ul ol, #article-container ol ul, #article-container ul ul {
+    padding-left: 30px;
+}
+
+
+/* -------------------------------------- 美化相关 -------------------------------------- */
+/* 版权卡片美化 */
+#post .post-copyright {
+    position: relative;
+    margin: 5rem 0 0.5rem;
+    padding: 1.5rem 0.8rem;
+    border: 5px solid #858585       /*卡片边框*/
+    border-radius: 20px;            /*边框圆角*/
+}
+#post .post-copyright:before {
+    position: absolute;
+    top: -1.9rem;                   /*C位置*/
+    color: rgba(73, 177, 245, 0.25);               /*C颜色*/
+    font-size: 6rem;                /*C大小*/
+}
+
+/* 文章分页卡片美化（上一篇 - 下一篇） */
+#pagination .prev-post a, #pagination .next-post a {
+    border-style: ridge;
+    border-width: 8px;
+    border-color: #d2d2d2;
+}
+
+
+/* -------------------------------------- 不知道什么鬼 -------------------------------------- */
+/* 页脚透明 */
+/* #footer {
+    background: transparent!important;
+} */
+
+/* 头图遮罩层透明 */
+#page-header::before{
+    background: transparent!important;
+}
+
+
+.read-mode #aside-content .card-widget {
+    background: rgba(158, 204, 171, 0.2)!important;
+}
+.read-mode div#post {
+    background: rgba(158, 204, 171, 0.2)!important;
+}
+
+/* .note:not(.no-icon) { */
+    /* padding-left: 1em; */
+/* } */
+
+
+
+/* -------------------------------------- 表格 -------------------------------------- */
+/* 表格边框 */
+table th,
+table td {
+  border: 1px solid #141b1b;
+}
+table tr td:first-child {
+    background-color: #ffe0e07d;
+    color: #e2542e;
+    text-align: center;
+}
+table th {
+    background-color: rgb(0 0 0 / 30%);
+    color: #5c00ff;
+}
